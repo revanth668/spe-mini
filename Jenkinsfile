@@ -6,7 +6,7 @@ pipeline {
         IMAGE       = "${DOCKER_USER}/calculator"
         TAG         = "${BUILD_NUMBER}"
         DOCKER_CREDS = credentials('dockerhub-creds') // Jenkins credentials ID (username + token)
-        NOTIFY_EMAIL = 'saivenkatsreekantam@gmail.com'
+        NOTIFY_EMAIL = 'revanth.puppala@gmail.com'
     }
 
     triggers {
