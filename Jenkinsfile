@@ -61,7 +61,7 @@ pipeline {
                 sh 'DOCKER_USER=$DOCKER_USER TAG=$TAG docker compose up -d --remove-orphans'
                 sh '''
                     for i in $(seq 1 20); do
-                        if curl -fs http://localhost/actuator/health; then
+                        if curl -fs http://localhost:8083/actuator/health; then
                             echo
                             echo "Deployment healthy"
                             exit 0
