@@ -7,6 +7,9 @@ pipeline {
         TAG         = "${BUILD_NUMBER}"
         DOCKER_CREDS = credentials('dockerhub-creds') // Jenkins credentials ID (username + token)
         NOTIFY_EMAIL = 'revanth2005puppala@gmail.com'
+
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+        PATH = "/usr/lib/jvm/java-17-openjdk-amd64/bin:${env.PATH}"
     }
 
     triggers {
